@@ -12,18 +12,19 @@ const LogoContainer  = styled.div`
 `;
 
 const LogoText = styled.div`
-    ${tw`
+    ${tw`       
         text-xl
-        md:text-xl
+        md:text-2xl
         font-bold
         text-black
-        ml-4
-    `};
+        ml-1
+    `};    
+    letter-spacing: -0.5px; /* Adjust the letter spacing */
 `;
 
 const Image = styled.div`
     width: auto;
-    ${tw`h-16 md:h-16`};
+    ${tw`h-12 md:h-12`};
     
     img {
         width:auto;
@@ -35,6 +36,6 @@ export function Logo(){
         <Image>
             <img src={CarLogoImg} alt={"Roberto's Auto Services"}/>
         </Image>
-        <LogoText>Roberto's <br/> Auto Services</LogoText>
+        <LogoText>Roberto's <br/>Auto Services</LogoText>
     </LogoContainer>
 }
