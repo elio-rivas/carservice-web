@@ -12,14 +12,17 @@ const LogoContainer  = styled.div`
 `;
 
 const LogoText = styled.div`
-    ${tw`       
-        text-xl
-        md:text-2xl
+    ${tw` 
+        text-base
+        md:text-lg
+        lg:text-xl   /* Larger size for larger screens */
+        xl:text-2xl  /* Even larger size for extra-large screens */
         font-bold
         text-black
         ml-1
     `};    
     letter-spacing: -0.5px; /* Adjust the letter spacing */
+    //text-shadow: 0.5px 0.5px 0.5px rgba(255,0,0,0.5); 
 `;
 
 const Image = styled.div`
