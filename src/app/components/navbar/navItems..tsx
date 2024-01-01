@@ -3,6 +3,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { Slide as Menu } from "react-burger-menu";
 import { useMediaQuery } from "react-responsive";
+import { SCREENS } from "../responsive";
 
 const ListContainer = styled.ul`
   ${tw`
@@ -27,22 +28,44 @@ const NavItem = styled.li`
   `};
 `;
 
-export function NavItems(){
+export function NavItems() {
+  const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
+  if (isMobile) 
+    return (
+      <Menu>
+        <ListContainer>
+          <NavItem>
+            <a href="#">Services</a>
+          </NavItem>
+          <NavItem>
+            <a href="#">Parts</a>
+          </NavItem>
+          <NavItem>
+            <a href="#">Contacts Us</a>
+          </NavItem>
+          <NavItem>
+            <a href="#">Home</a>
+          </NavItem>
+        </ListContainer>
+      </Menu>
+    );
+  
 
- 
-  return <ListContainer>
-    <NavItem>
-      <a href="#">Services</a>
-    </NavItem>
-    <NavItem>
-      <a href="#">Parts</a>
-    </NavItem>
-    <NavItem>
-      <a href="#">Contacts Us</a>
-    </NavItem>
-    <NavItem>
-      <a href="#">Home</a>
-    </NavItem>
-  </ListContainer>
+  return (
+    <ListContainer>
+      <NavItem>
+        <a href="#">Services</a>
+      </NavItem>
+      <NavItem>
+        <a href="#">Parts</a>
+      </NavItem>
+      <NavItem>
+        <a href="#">Contacts Us</a>
+      </NavItem>
+      <NavItem>
+        <a href="#">Home</a>
+      </NavItem>
+    </ListContainer>
+  );
 }

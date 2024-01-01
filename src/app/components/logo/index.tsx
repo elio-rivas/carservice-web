@@ -24,7 +24,7 @@ const LogoText = styled.div`
 
 const Image = styled.div`
     width: auto;
-    ${tw`h-12 md:h-12`};
+    ${tw`h-16 md:h-16`};
     
     img {
         width:auto;
