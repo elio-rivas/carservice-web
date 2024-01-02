@@ -18,7 +18,7 @@ const NavItem = styled.li<{menu?: any}>`
     text-sm
     md:text-base 
     text-black
-    font-medium
+    font-bold
     mr-1
     md:mr-5
     cursor-pointer
@@ -33,11 +33,11 @@ const NavItem = styled.li<{menu?: any}>`
   }
   
   @media (min-width: ${SCREENS.xl}) {
-    font-size: 1.2rem; /* Adjust the font size for extra-large screens */
+    font-size: 1.1rem; /* Adjust the font size for extra-large screens */
   }
   
   @media (min-width: ${SCREENS['2xl']}) {
-    font-size: 1.4rem; /* Adjust the font size for 2xl screens */
+    font-size: 1.2rem; /* Adjust the font size for 2xl screens */
   }
 
   ${({ menu })=> menu && css`
